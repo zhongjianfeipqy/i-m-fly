@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PUB-rL-cnr">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Screen Change Controller-->
+        <scene sceneID="zBc-EL-Wad">
+            <objects>
+                <viewController id="PUB-rL-cnr" customClass="screenChangeController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nhx-zu-m39"/>
+                        <viewControllerLayoutGuide type="bottom" id="bwW-XW-Vbp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="w68-9n-J6a">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ia-7S-3Nx">
+                                <state key="normal" title="横屏"/>
+                                <connections>
+                                    <action selector="horizontalScreenClick:" destination="PUB-rL-cnr" eventType="touchUpInside" id="obU-kb-7jk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfZ-Mj-cog">
+                                <state key="normal" title="竖屏"/>
+                                <connections>
+                                    <action selector="verticalClick:" destination="PUB-rL-cnr" eventType="touchUpInside" id="u4R-Bo-ZCH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xki-f3-Rt8">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPY-4k-8M6">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4A-bv-Kf2">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYi-0m-jQq">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oW4-8s-N74">
+                                <state key="normal" title="dismissVC"/>
+                                <connections>
+                                    <action selector="disMissBtnClick:" destination="PUB-rL-cnr" eventType="touchUpInside" id="Cqw-gd-7j2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOA-cG-TlL">
+                                <state key="normal" title="popVC"/>
+                                <connections>
+                                    <action selector="popBtnClick:" destination="PUB-rL-cnr" eventType="touchUpInside" id="DsA-rq-vaf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6Ia-7S-3Nx" firstAttribute="centerY" secondItem="w68-9n-J6a" secondAttribute="centerY" id="1aw-6a-hmY"/>
+                            <constraint firstItem="xki-f3-Rt8" firstAttribute="centerY" secondItem="h4A-bv-Kf2" secondAttribute="centerY" id="BK3-LR-J0i"/>
+                            <constraint firstItem="xki-f3-Rt8" firstAttribute="leading" secondItem="w68-9n-J6a" secondAttribute="leading" constant="50" id="EXt-9O-YeK"/>
+                            <constraint firstItem="cOA-cG-TlL" firstAttribute="top" secondItem="oW4-8s-N74" secondAttribute="top" id="NPc-dl-GOI"/>
+                            <constraint firstItem="rYi-0m-jQq" firstAttribute="top" secondItem="xki-f3-Rt8" secondAttribute="bottom" constant="30" id="OD5-2b-gIX"/>
+                            <constraint firstItem="BPY-4k-8M6" firstAttribute="top" secondItem="h4A-bv-Kf2" secondAttribute="bottom" constant="30" id="VVu-dq-uYb"/>
+                            <constraint firstItem="pfZ-Mj-cog" firstAttribute="top" secondItem="6Ia-7S-3Nx" secondAttribute="bottom" constant="23.5" id="Yfn-Gh-zFZ"/>
+                            <constraint firstItem="h4A-bv-Kf2" firstAttribute="top" secondItem="pfZ-Mj-cog" secondAttribute="bottom" constant="42" id="jl8-2e-tQ0"/>
+                            <constraint firstItem="oW4-8s-N74" firstAttribute="top" secondItem="nhx-zu-m39" secondAttribute="bottom" constant="100" id="kgQ-Md-wIQ"/>
+                            <constraint firstItem="pfZ-Mj-cog" firstAttribute="centerX" secondItem="w68-9n-J6a" secondAttribute="centerX" id="nUB-mA-dLa"/>
+                            <constraint firstItem="6Ia-7S-3Nx" firstAttribute="centerX" secondItem="w68-9n-J6a" secondAttribute="centerX" id="noI-6q-sFv"/>
+                            <constraint firstAttribute="trailing" secondItem="h4A-bv-Kf2" secondAttribute="trailing" constant="50" id="nxv-ug-axd"/>
+                            <constraint firstAttribute="trailing" secondItem="BPY-4k-8M6" secondAttribute="trailing" constant="50" id="tzN-Xr-WfS"/>
+                            <constraint firstAttribute="trailing" secondItem="oW4-8s-N74" secondAttribute="trailing" constant="32" id="v0g-IQ-CTf"/>
+                            <constraint firstItem="cOA-cG-TlL" firstAttribute="leading" secondItem="w68-9n-J6a" secondAttribute="leading" constant="30" id="xLg-hG-SW0"/>
+                            <constraint firstItem="rYi-0m-jQq" firstAttribute="leading" secondItem="w68-9n-J6a" secondAttribute="leading" constant="50" id="ydj-Lj-p9g"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kvv-WB-1jh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-17" y="-193"/>
+        </scene>
+    </scenes>
+</document>
